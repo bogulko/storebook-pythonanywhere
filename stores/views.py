@@ -4,7 +4,7 @@ from django.db.models import Count
 
 
 def stores_list(request):
-  seznam = stores.objects.all()
+  seznam = Stores.objects.all()
   return render(request, 'seznam.html', {'seznam':seznam})
 
   
