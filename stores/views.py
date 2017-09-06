@@ -1,3 +1,10 @@
 from django.shortcuts import render
+from stores.models import Stores, Brand, municipality
+from django.db.models import Count
 
-# Create your views here.
+
+def stores_list(request):
+  seznam = stores.objects.all()
+  return render(request, 'seznam.html', {'seznam':seznam})
+
+  
